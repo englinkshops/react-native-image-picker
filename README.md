@@ -208,3 +208,12 @@ path | - | OK | The file path
 latitude | - | OK | Latitude metadata, if available
 longitude | - | OK | Longitude metadata, if available
 timestamp | - | OK | Timestamp metadata, if available, in ISO8601 UTC format
+
+
+### Error Tip for <= 0.29
+
+" error: cannot find symbol import com.facebook.react.bridge.BaseActivityEventListener "
+
+in (imagePicker > ImagePickerActivityEventListener), instead of extending BaseActivityEventListener,
+implements ActivityEventListener.
+Import this one instead >> import com.facebook.react.bridge.ActivityEventListener;
